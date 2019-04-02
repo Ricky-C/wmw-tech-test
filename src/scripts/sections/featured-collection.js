@@ -46,8 +46,9 @@ register('featured-collection', {
           $('.featured-collection > .page-width > .grid').slick({
             mobileFirst: true,
           dots: false,
+          rows: 2,
           centerMode: true,
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll:  1,
           infinite: true,
             variableWidth: false,
