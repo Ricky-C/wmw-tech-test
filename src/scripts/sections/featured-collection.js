@@ -19,6 +19,8 @@ register('featured-collection', {
   init() {
     window.console.log('Initialising featured collection section');
 
+
+      //Slick Slider Init
         if($(window).width() > 768){
           $('.featured-collection > .page-width > .grid').slick({
             mobileFirst: true,
@@ -56,12 +58,20 @@ register('featured-collection', {
 
         }
 
+
+      //Add To Cart Hover
         $('.collection-item').mouseenter(function() {
           $(this).find('.collection-add').css('visibility', 'visible');
         });
         $('.collection-item').mouseleave(function() {
           $(this).find('.collection-add').css('visibility', 'hidden');
         });
+
+      //Sale Tag
+        $(".collection-item-price > .product-price__sale-label").each(function (){
+          $(this).insertAfter($(this).parent().parent().parent());
+        });
+
   },
 
   publicMethod() {
