@@ -18,6 +18,43 @@ register('featured-collection', {
 
   init() {
     window.console.log('Initialising featured collection section');
+
+        if($(window).width() > 768){
+          $('.featured-collection > .page-width > .grid').slick({
+            mobileFirst: true,
+          dots: true,
+          slidesToShow: 4,
+          slidesToScroll: 4,
+          infinite: true,
+            variableWidth: false,
+            arrows: true
+        });
+        } else if (($(window).width() <= 768) && ($(window).width() >= 415)){
+          $('.featured-collection > .page-width > .grid').slick({
+            mobileFirst: true,
+          dots: true,
+          slidesToShow: 3,
+          slidesToScroll: 2,
+          infinite: true,
+            variableWidth: false,
+            arrows: true
+        });
+
+        } else if ($(window).width() <= 414) {
+          $('.featured-collection > .page-width > .grid').slick({
+            mobileFirst: true,
+          dots: true,
+          centerMode: true,
+          slidesToShow: 1,
+          slidesToScroll:  1,
+          infinite: true,
+            variableWidth: false,
+            arrows: true
+        });
+        $('.featured-collection > .page-width > .grid').slick('slickGoTo', -1);
+        } else{
+
+        }
   },
 
   publicMethod() {
