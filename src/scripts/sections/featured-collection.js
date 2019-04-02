@@ -22,7 +22,7 @@ register('featured-collection', {
         if($(window).width() > 768){
           $('.featured-collection > .page-width > .grid').slick({
             mobileFirst: true,
-          dots: true,
+          dots: false,
           slidesToShow: 4,
           slidesToScroll: 4,
           infinite: true,
@@ -32,7 +32,7 @@ register('featured-collection', {
         } else if (($(window).width() <= 768) && ($(window).width() >= 415)){
           $('.featured-collection > .page-width > .grid').slick({
             mobileFirst: true,
-          dots: true,
+          dots: false,
           slidesToShow: 3,
           slidesToScroll: 2,
           infinite: true,
@@ -43,7 +43,7 @@ register('featured-collection', {
         } else if ($(window).width() <= 414) {
           $('.featured-collection > .page-width > .grid').slick({
             mobileFirst: true,
-          dots: true,
+          dots: false,
           centerMode: true,
           slidesToShow: 1,
           slidesToScroll:  1,
@@ -55,6 +55,13 @@ register('featured-collection', {
         } else{
 
         }
+
+        $('.collection-item').mouseenter(function() {
+          $(this).find('.collection-add').css('visibility', 'visible');
+        });
+        $('.collection-item').mouseleave(function() {
+          $(this).find('.collection-add').css('visibility', 'hidden');
+        });
   },
 
   publicMethod() {
