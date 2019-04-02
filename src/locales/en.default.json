@@ -275,9 +275,9 @@
       "regular_price": "Regular price",
       "sold_out": "Sold Out",
       "unavailable": "Unavailable",
-      "on_sale": "On Sale",
-      "on_sale_from_html": "On Sale from {{ price }}",
-      "from_text_html": "From {{ price }}",
+      "on_sale": "Sale",
+      "on_sale_from_html": "Sale {{ price }}",
+      "from_text_html": "{{ price }}",
       "quantity": "Quantity",
       "add_to_cart": "Add to Cart"
     }
